@@ -364,8 +364,8 @@ def get_backup_dir(base_path):
             return False
 
     date = datetime.datetime.today()
-    backup_dir = '%s/backup-%04d-%02d-%02d-(%02d:%02d:%02d)' \
-    % (base_path, date.year, date.month, date.day, date.hour, date.minute, date.second)
+    backup_dir = '%s/backup-%04d-%02d-%02d-%02d%02d' \
+    % (base_path, date.year, date.month, date.day, date.hour, date.minute)
 
     if not os.path.exists(backup_dir):
         # Create new dir
